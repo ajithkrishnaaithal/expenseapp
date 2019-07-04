@@ -1,0 +1,37 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Counter</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+ </head>
+ <body>
+     <input id="txtinput"></input>
+    <button id="btncounter">+</button> 
+    <script>
+        let counter=0;
+        //initializing a variable counter
+
+        //counter increment function
+    function counterincrement(){
+        counter=counter+1;
+        console.log(counter);
+        console.log(counter);
+    }
+
+    const element = document.querySelector("#btncounter");
+    console.log(element);
+        //Attaching a Listner event to a element attribute.
+    element.addEventListener("click",counterincrement,false);
+    </script>
+ </body>
+ </html>
