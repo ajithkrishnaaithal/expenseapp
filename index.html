@@ -15,23 +15,37 @@
     </style>
  </head>
  <body>
-     <input id="txtinput"></input>
+     <h1 id="headingelem"></h1>
+    <input id="txtinput"></input>
     <button id="btncounter">+</button> 
     <script>
-        let counter=0;
+
+        const headingvalue = document.querySelector("#headingelem");
+
         //initializing a variable counter
+        let totalexpense=0;
 
-        //counter increment function
-    function counterincrement(){
-        counter=counter+1;
-        console.log(counter);
-        console.log(counter);
-    }
+        //set the heading element to total expense
+        headingvalue.textContent = totalexpense;
+       
+        function addexpense(){
+            //read value from input amount
+            const element = document.querySelector("#txtinput");
+            //retrieve the value
+            const textvalue = element.value;
+            //convert to number from string
+            const expense = parseInt(textvalue,10);
 
-    const element = document.querySelector("#btncounter");
-    console.log(element);
-        //Attaching a Listner event to a element attribute.
-    element.addEventListener("click",counterincrement,false);
+            totalexpense = expense+totalexpense;
+            console.log(totalexpense);
+            //set the heading element to totalexpense
+            headingvalue.textContent = totalexpense;
+        }
+
+        const element = document.querySelector("#btncounter");
+        console.log(element);
+            //Attaching a Listner event to a element attribute.
+        element.addEventListener("click",addexpense,false);
     </script>
  </body>
  </html>
